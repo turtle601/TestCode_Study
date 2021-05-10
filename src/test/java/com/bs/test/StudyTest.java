@@ -4,21 +4,27 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.DisplayNameGeneration;
+import org.junit.jupiter.api.DisplayNameGenerator;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 
+@DisplayNameGeneration(DisplayNameGenerator.ReplaceUnderscores.class)
 class StudyTest {
 
 	@Test
-	void test() {
+	@DisplayName("스터디 만들기")
+	void create_new_study() {
 		Study study = new Study();
 		assertNotNull(study);
 		System.out.println("do first test");
 	}
 	
 	@Test
-	void test1() {
+	@DisplayName("또 다른 스터디 만들기")
+	void create_new_study_again() {
 		System.out.println("do second test");
 		
 	}
